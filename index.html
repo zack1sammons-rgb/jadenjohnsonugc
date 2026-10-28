@@ -221,21 +221,22 @@
   }
 
   /* ---------- Brand bar: always moving, the name under the mouse grows ---------- */
-  .logos { position: relative; border-block: 1px solid var(--line); padding: 26px 0; overflow: hidden; }
+  /* Zack, 10-28: the bar is a blue band, like Michelle's purple one. */
+  .logos { position: relative; background: var(--blue); padding: 26px 0; overflow: hidden; }
   .logos::before, .logos::after {
     content: ''; position: absolute; top: 0; bottom: 0; width: clamp(48px, 8vw, 120px); z-index: 1; pointer-events: none;
   }
-  .logos::before { left: 0; background: linear-gradient(to right, var(--bg), transparent); }
-  .logos::after { right: 0; background: linear-gradient(to left, var(--bg), transparent); }
+  .logos::before { left: 0; background: linear-gradient(to right, var(--blue), transparent); }
+  .logos::after { right: 0; background: linear-gradient(to left, var(--blue), transparent); }
   .logos-track { display: flex; align-items: center; gap: clamp(36px, 5vw, 64px); width: max-content; animation: marquee 42s linear infinite; }
   .brandword {
     flex: none; white-space: nowrap; font-weight: 800; font-stretch: 110%;
-    font-size: clamp(16px, 2.1vw, 22px); letter-spacing: -0.01em; color: var(--muted);
+    font-size: clamp(16px, 2.1vw, 22px); letter-spacing: -0.01em; color: var(--on-blue);
     transition: transform 200ms ease, color 200ms ease;
   }
   @keyframes marquee { to { transform: translateX(calc(-50% - 32px)); } }
   @media (hover: hover) and (pointer: fine) {
-    .brandword:hover { transform: scale(1.14); color: var(--blue-deep); }
+    .brandword:hover { transform: scale(1.14); color: #0B1A27; }
     .media-play:hover .play { background: rgba(20, 40, 58, 0.72); }
   }
 
