@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="assets/videos/posters/twigz-gym-bag.jpg">
+<link rel="preload" as="image" href="assets/videos/posters/intro.jpg">
 <style>
   /*
     Design read: personal portfolio for brand marketers who open it from a DM or an email, mostly on a phone.
@@ -437,13 +437,10 @@
         <a href="#contact" class="btn btn-ghost">Work with me</a>
       </div>
     </div>
-    <button class="phone" id="phone" type="button" aria-label="Play the Twigz ad">
+    <button class="phone" id="phone" type="button" aria-label="Play my intro">
       <span class="screen">
-        <img src="assets/videos/posters/twigz-gym-bag.jpg" alt="" fetchpriority="high">
-        <video id="phoneVideo" loop playsinline preload="none" poster="assets/videos/posters/twigz-gym-bag.jpg" src="assets/videos/twigz-gym-bag.mp4"></video>
-        <span class="screen-ui">
-          <span class="screen-caption">“see what I packed in my gym bag today”</span>
-        </span>
+        <img src="assets/videos/posters/intro.jpg" alt="" width="720" height="1280" fetchpriority="high">
+        <video id="phoneVideo" loop playsinline preload="none" poster="assets/videos/posters/intro.jpg" src="assets/videos/intro.mp4"></video>
         <span class="play" aria-hidden="true">▶</span>
       </span>
     </button>
@@ -639,7 +636,7 @@
   setTimeout(() => phone.classList.add('settled'), 1500);
   phone.addEventListener('click', () => {
     const on = phone.classList.toggle('playing');
-    phone.setAttribute('aria-label', on ? 'Pause the Twigz ad' : 'Play the Twigz ad');
+    phone.setAttribute('aria-label', on ? 'Pause my intro' : 'Play my intro');
     if (on) { phoneVideo.currentTime = 0; phoneVideo.play().catch(() => {}); } else { phoneVideo.pause(); }
   });
 
